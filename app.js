@@ -6,17 +6,17 @@ import sequelize from './config/database.js';
 // Importing route files
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
-// import cors from 'cors';
+import cors from 'cors';
 
 
 
 const app = express();
 
-// app.use(cors({
-//   origin: ['http://localhost:3000', 'http://localhost:3030'],
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   credentials: true
-// }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 app.use(express.json());
 
